@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <style>
+    /*----font size of brand -----*/
+    .text-font-logo {
+      font-size: 22px;
+    }
+
+    /*----Sign in form-----*/
+    .form-fillup {
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /*----log-in-----*/
+    .login-form {
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #user-form-fillup,
+    #hide-btn,
+    #update-profile-form {
+      display: none;
+    }
+  </style>
+  <title>Library management</title>
+</head>
+
+<body>
+  <!--------------Nav ber---------------->
+
+  <nav class="nav bg-info text-white navbar-expand-sm">
+    <a class="nav-link ml-5 text-white font-weight-bold text-font-logo" href="#">Library management system </a>
+
+    <div style="display: flex; margin-left: auto; font-size: 20px;">
+      <a class="nav-link ml-auto text-white active " href="#" id="sign-up">Sign up</a>
+      <a class="nav-link mr-5 text-white" href="#" id="log-in">Log in</a>
+    </div>
+
+    </ul>
+  </nav>
+  <!-----Container--------------->
+
+  <!--*******************************************-->
+  <!--sign in form start(form-fillup) page----------->
+
+  <div class="container">
+    <div class="form-fillup" id="user-form-fillup">
+      <form action="">
+        <div class="border p-2 my-3 shadow-lg p-3 mb-5 bg-white rounded">
+
+          <h1 class="text-center border-bottom font-weight-normal pb-1 bg-primary text-white ">Sign up here </h1>
+
+          <div class="form-group">
+            <label class="text-dark lablesize">User name</label>
+            <input type="text" class="form-control" name="name" id="username" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="text-dark lablesize">Email</label>
+            <input type="email" class="form-control" name="email" id="usermail" placeholder="Enter email id" required>
+          </div>
+
+          <div class="form-group">
+            <label class="text-dark lablesize">Password</label>
+            <input type="password" class="form-control" name="password" id="userpassword" placeholder="Enter password"
+              required>
+          </div>
+          <div class="form-group">
+            <label class="text-dark lablesize">Mobile No.</label>
+            <input type="num" class="form-control" name="numbar" id="mobile" placeholder="Mobile No." required>
+          </div>
+          <div class="form-group form-check ">
+            <input type="checkbox" class="form-check-input" checked>
+            <label class="form-check-label">Are you sure? </label>
+          </div>
+          <button class="btn btn-danger  w-100 " type="submit" id="cookieset">Sign in</button>
+
+          <p class="pt-3"> Have an account? <a onclick="Openloginform()" href="#">log in</a></p>
+          <p class="text-center">Get the app</p>
+          <div class="row">
+            <div class="col-4">
+              <img src="images/app-store.png" class="img-thumbnail ">
+            </div>
+            <div class="col-4">
+              <img src="images/menu.png" class="img-thumbnail">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!---sign in form(form-fillup)page end------------->
+  <!--*******************************************-->
+
+  <!-----Log in form start---------------->
+  <!--*******************************************-->
+  <div class="container">
+    <div class="login-form" id="user-login-form">
+      <form action="index1.html">
+        <div class="border p-2 my-3 shadow-lg p-3 mb-5 bg-white rounded">
+
+          <h1 class="text-center border-bottom font-weight-normal pb-1 bg-primary text-white">Log in here </h1>
+          <div class="form-group">
+            <label class="text-dark lablesize">Email</label>
+            <input type="email" class="form-control" name="email" id="mail" placeholder="Enter email id" required>
+          </div>
+
+          <div class="form-group">
+            <label class="text-dark lablesize">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password"
+              required>
+          </div>
+
+          <input class="btn btn-danger pb-2  w-100" value="Log in(double click)" type="submit" id="hide-btn">
+          <button class=" btn btn-danger pb-2 w-100" type="button" id="cookieget">Log in(double click)</button> <span
+            id="login-Error"></span>
+          <p class="mt-1">Don't have an account? <a onclick="Openfillupform()" href="#"> Sign in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-----Log in form end---------------->
+  <!--*******************************************-->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-----script for form  ------->
+  <script>
+    "use strict";
+    let Openfillupform = () => {
+      document.getElementById("user-form-fillup").style.display = "block";
+      document.getElementById("user-login-form").style.display = "none";
+      document.getElementById("update-profile-form").style.display = "none";
+    };
+    let Openloginform = () => {
+      document.getElementById("user-login-form").style.display = "block";
+      document.getElementById("user-form-fillup").style.display = "none";
+      document.getElementById("update-profile-form").style.display = "block";
+    };
+    let opfillupform = document.getElementById("sign-up");
+    let oploginform = document.getElementById("log-in");
+    opfillupform.addEventListener("click", Openfillupform, false);
+    oploginform.addEventListener("click", Openloginform, false);
+
+    /*-------------------cookie---------------*/
+    /*-------set cookie-------------*/
+    let setcookie = () => {
+      document.cookie =
+        "username=" +
+        document.forms[0].elements[0].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+      document.cookie =
+        "useremail=" +
+        document.forms[0].elements[1].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+      document.cookie =
+        "userpassword=" +
+        document.forms[0].elements[2].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+      document.cookie =
+        "usermobile=" +
+        document.forms[0].elements[3].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+    };
+    document
+      .getElementById("cookieset")
+      .addEventListener("click", setcookie, false);
+
+    /*----------get cookie----------*/
+
+    let getcookie = () => {
+
+      document.cookie =
+        "email=" +
+        document.forms[1].elements[0].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+      document.cookie =
+        "password=" +
+        document.forms[1].elements[1].value +
+        ";max-age=" +
+        60 * 60 * 24 * 100;
+      //split the cookie (;)
+      let cookieArray = document.cookie.split(";");
+      let len = cookieArray.length;
+      for (let i = 0; i < len; i++) {
+        //split the cookie (=)
+        let valueArray = cookieArray[i].split("=");
+
+        if (valueArray[0].trim() == "username") {
+          var u_name = valueArray[1];
+        } else if (valueArray[0].trim() == "useremail") {
+          var u_email = valueArray[1];
+        } else if (valueArray[0].trim() == "userpassword") {
+          var u_pass = valueArray[1];
+        } else if (valueArray[0].trim() == "usermobile") {
+          var u_mobile = valueArray[1];
+        } else if (valueArray[0].trim() == "password") {
+          var pass = valueArray[1];
+        } else if (valueArray[0].trim() == "email") {
+          var email = valueArray[1];
+        } else if (valueArray[0].trim() == "collagename") {
+          var coll = valueArray[1];
+        }
+      }
+      /**************************************/
+
+      //comparing cookie
+      if (u_email === email && u_pass === pass) {
+        document.getElementById("hide-btn").style.display = "block"
+        document.getElementById('cookieget').style.display = "none"
+        document.getElementById("user-name-update").innerHTML = `Hii ${u_name} Please update your profile`;
+
+      } else {
+        document.getElementById("login-Error").textContent =
+          "The username/password you entered doesn't belong to an account. Please check your username and try again.";
+      }
+      document.getElementById("login-Error").style.color = "red";
+
+    };
+    document
+      .getElementById("cookieget")
+      .addEventListener("click", getcookie, false);
+  </script>
+</body>
+
+</html>
