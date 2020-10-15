@@ -4,6 +4,21 @@ $(".carousel").carousel({
   interval: 1400,
 });
 
+//Dark/ Default mode !
+function Default() {
+  document.getElementById("dark").style.display="inline-block"
+  document.getElementById("default").style.display="none"
+  document.getElementById("darkcolorbackground").style.backgroundColor=
+ 'black'
+}
+function Dark() {
+  document.getElementById("default").style.display="inline-block"
+  document.getElementById("dark").style.display="none"
+  document.getElementById("darkcolorbackground").style.backgroundColor=
+ 'white'
+
+}
+
 //menu open and close state/* ------------------*/
 function closemenu() {
   document.getElementById("hamburger").style.display = "none";
